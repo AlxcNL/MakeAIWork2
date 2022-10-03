@@ -21,6 +21,7 @@ function install_with_conda {
     echo "Try to install basic Python requirements without Miniconda\n"
     install_without_conda
   else
+    conda init && conda activate
     conda install --yes -c conda-forge \
       beautifulsoup4 \
       jupyter_core \
@@ -45,26 +46,6 @@ function install_with_conda {
 
 }
 
-# Detect OS
-unameOut="$(uname -s)"
-os="${unameOut:0:7}"
-case "${os}" in
-    Linux*)     
-      machine="Linux"
-      install_with_conda
-    ;;
-    Darwin*)
-      machine="Mac"
-      install_with_conda
-    ;;
-    MINGW*)     
-      machine="Git Bash"
-      install_without_conda
-    ;;
-    *)          
-      machine="UNKNOWN:${os}"
-esac
-
 # Install all required libraries t
 function install_with_pip {
   # Upgrade pip
@@ -76,4 +57,23 @@ function install_with_pip {
 
 }
 
-install_with_pip
+# Detect OS
+unameOut="$(uname -s)"
+os="${unameOut:0:7}"
+case "${os}" in
+    Linux*)     
+      machine="Linux"
+      install_with_conda && install_with_pip
+    ;;
+    Darwin*)
+      machine="Mac"
+      install_with_conda && install_with_pip
+    ;;
+    MINGW*)     
+      machine="Git Bash"
+      install_without_conda && env/Scripts/activate && install_with_pip
+    ;;
+    *)          
+      machine="UNKNOWN:${os}"
+      install_without_conda && conda activate && install_with_pip
+esac
