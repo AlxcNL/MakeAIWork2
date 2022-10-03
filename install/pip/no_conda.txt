@@ -8,7 +8,7 @@ Pillow
 pandas 
 py-cpuinfo 
 pyopengl 
-pytables 
+pytab 
 scikit-image 
 scikit-learn 
 scipy 
