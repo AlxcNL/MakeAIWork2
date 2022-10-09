@@ -11,7 +11,3 @@ if (! command -v "conda" &> /dev/null ) then
 else
     conda init zsh
 fi
-
-zsh || bash
-
-

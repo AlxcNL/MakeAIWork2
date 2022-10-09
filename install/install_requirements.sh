@@ -22,7 +22,6 @@ function installWithConda {
     echo "Try to install basic Python requirements without Miniconda\n"
     installWithoutConda
   else
-    conda init && conda activate
     conda install --yes -c conda-forge \
       beautifulsoup4 \
       jupyter_core \
@@ -43,7 +42,7 @@ function installWithConda {
       selenium \
       statsmodels \
       sympy \
-      tensorflow=2.8
+      tensorflow
   fi
 
 }
@@ -54,9 +53,6 @@ function installWithPip {
 
   # Upgrade pip
   python -m pip install --upgrade pip
-
-  # Install setuptools
-  python -m pip install setuptools
   python -m pip install --no-cache-dir -r install/pip/requirements.txt
 
 }
@@ -71,8 +67,9 @@ case "${os}" in
     ;;
     # MacOS
     Darwin*)
-      installWithConda \
-        && installWithPip
+      install/create_virtual_env.sh 
+      installWithConda  
+      installWithPip
     ;;
     # Git Bash
     MINGW*)     
@@ -81,6 +78,7 @@ case "${os}" in
       installWithPip
     ;;
     *)          
-      installWithoutConda \
-        && installWithPip
+      install/create_virtual_env.sh
+      installWithoutConda
+      installWithPip
 esac
