@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-# # Activate virtual environment env
-# source env/bin/activate
+function installWithoutConda {
+  echo "Install without conda"
 
-function install_without_conda {
   # Upgrade pip
   python -m pip install --upgrade pip
 
@@ -11,16 +10,19 @@ function install_without_conda {
   python -m pip install setuptools
   python -m pip install virtualenv
   python -m venv env 
-  env/Scripts/activate || env/bin/activate
+  env/Scripts/activate
   python -m pip install --no-cache-dir -r install/pip/no_conda.txt
 
 }  
 
-function install_with_conda {
+function installWithConda {
+  echo "Install with conda"
+  
   if (! command -v "conda" &> /dev/null ) then
     echo "Try to install basic Python requirements without Miniconda\n"
-    install_without_conda
+    installWithoutConda
   else
+    conda init && conda activate
     conda install --yes -c conda-forge \
       beautifulsoup4 \
       jupyter_core \
@@ -28,6 +30,7 @@ function install_with_conda {
       keras \
       Keras-Preprocessing \
       matplotlib-base \
+      nodejs \
       Pillow \
       pandas \
       py-cpuinfo \
@@ -46,7 +49,9 @@ function install_with_conda {
 }
 
 # Install all required libraries t
-function install_with_pip {
+function installWithPip {
+  echo "Install with pip"
+
   # Upgrade pip
   python -m pip install --upgrade pip
 
@@ -61,18 +66,21 @@ unameOut="$(uname -s)"
 os="${unameOut:0:7}"
 case "${os}" in
     Linux*)     
-      machine="Linux"
-      install_with_conda && install_with_pip
+      installWithConda \
+        && installWithPip
     ;;
+    # MacOS
     Darwin*)
-      machine="Mac"
-      install_with_conda && install_with_pip
+      installWithConda \
+        && installWithPip
     ;;
+    # Git Bash
     MINGW*)     
-      machine="Git Bash"
-      install_without_conda && env/Scripts/activate && install_with_pip
+      install/create_virtual_env.sh
+      installWithoutConda
+      installWithPip
     ;;
     *)          
-      machine="UNKNOWN:${os}"
-      install_without_conda && conda activate && install_with_pip
+      installWithoutConda \
+        && installWithPip
 esac
