@@ -5,13 +5,13 @@
 
 function install_without_conda {
   # Upgrade pip
-  python3 -m pip install --upgrade pip
+  python -m pip install --upgrade pip
 
   # Install setuptools
-  python3 -m pip install setuptools
-  python3 -m pip install virtualenv
-  python3 -m venv env 
-  env/Scripts/activate
+  python -m pip install setuptools
+  python -m pip install virtualenv
+  python -m venv env 
+  env/Scripts/activate || env/bin/activate
   python -m pip install --no-cache-dir -r install/pip/no_conda.txt
 
 }  
@@ -21,7 +21,6 @@ function install_with_conda {
     echo "Try to install basic Python requirements without Miniconda\n"
     install_without_conda
   else
-    conda init && conda activate
     conda install --yes -c conda-forge \
       beautifulsoup4 \
       jupyter_core \
@@ -33,7 +32,7 @@ function install_with_conda {
       pandas \
       py-cpuinfo \
       pyopengl \
-      pytables \
+      pytables  \
       scikit-image \
       scikit-learn \
       scipy \
@@ -41,7 +40,7 @@ function install_with_conda {
       selenium \
       statsmodels \
       sympy \
-      tensorflow
+      tensorflow=2.8
   fi
 
 }

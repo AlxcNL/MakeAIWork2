@@ -14,12 +14,7 @@ pyspark
 python-spark-reader-library
 scipy
 seaborn 
+SimPyLC==3.10.0
 sklearn
 sparkflow
-tensorboard-plugin-wit 
-tensorflow==2.8 
-tensorflow_addons 
-tensorflow_datasets 
-tensorflow-estimator 
-tensorflow_hub 
 widgetsnbextension
