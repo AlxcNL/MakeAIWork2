@@ -1,3 +1,4 @@
+deel-datasets
 ipywidgets
 jupyterlab
 matplotlib
