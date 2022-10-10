@@ -3,14 +3,7 @@
 function installWithoutConda {
   echo "Install without conda"
 
-  # Upgrade pip
-  python -m pip install --upgrade pip
-
-  # Install setuptools
-  python -m pip install setuptools
-  python -m pip install virtualenv
-  python -m venv env 
-  env/Scripts/activate
+  echo "Install requierments with pip"
   python -m pip install --no-cache-dir -r install/pip/no_conda.txt
 
 }  
@@ -52,11 +45,11 @@ function installWithConda {
 function installWithPip {
   echo "Install with pip"
 
-  # Upgrade pip
-  python -m pip install --upgrade pip
-
-  # Install setuptools
+  echo "Prepare pip"
+  python -m pip install --upgrade pip    
   python -m pip install setuptools
+
+  echo "Install requierments with pip"
   python -m pip install --no-cache-dir -r install/pip/requirements.txt
 
 }
@@ -66,21 +59,20 @@ unameOut="$(uname -s)"
 os="${unameOut:0:7}"
 case "${os}" in
     Linux*)     
-      installWithConda \
-        && installWithPip
+      installWithConda
+      installWithPip
     ;;
     # MacOS
     Darwin*)
-      installWithConda \
-        && installWithPip
+      installWithConda
+      installWithPip
     ;;
     # Git Bash
     MINGW*)     
-      install/create_virtual_env.sh
       installWithoutConda
       installWithPip
     ;;
     *)          
-      installWithoutConda \
-        && installWithPip
+      installWithoutConda
+      installWithPip
 esac
