@@ -121,11 +121,11 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 **Create a fork of this repository**
 
-Create a fork of MitwRdam/MakeAIWork2 in [GitHub](https://github.com/MitwRdam/MakeAIWork2) or
+Create a fork of AlxcNL/MakeAIWork2 in [GitHub](https://github.com/AlxcNL/MakeAIWork2) or
 use the GitHub Client by entering the following commands in your terminal
 
 ```bash
-gh repo fork https://github.com/MitwRdam/MakeAIWork2
+gh repo fork https://github.com/AlxcNL/MakeAIWork2
 ```
 </li>
 
@@ -167,7 +167,7 @@ To be able To be able to fetch and merge changes from this repository using (bas
 If you used the GitHub client to create the fork you can <strong>skip</strong> this step, otherwise enter the following commands
 
 ```bash
-git remote add mitwrdam https://github.com/MitwRdam/MakeAIWork2
+git remote add AlxcNL https://github.com/AlxcNL/MakeAIWork2
 ```
 
 </li>
@@ -177,7 +177,7 @@ git remote add mitwrdam https://github.com/MitwRdam/MakeAIWork2
 Keep your fork repository up-todate by regularly pulling changes from the original remote repository into your local fork..
 
 ```bash
- git pull mitwrdam main
+ git pull AlxcNL main
 ```
 
 and push the changes to you remote fork
