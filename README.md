@@ -125,7 +125,7 @@ Create a fork of MitwRdam/MakeAIWork in [GitHub](https://github.com/MitwRdam/Mak
 use the GitHub Client by entering the following commands in your terminal
 
 ```bash
-gh repo fork https://github.com/MitwRdam/MakeAIWork
+gh repo fork https://github.com/MitwRdam/MakeAIWork2
 ```
 </li>
 
