@@ -119,37 +119,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 <li>
 
-**Create a ssh key-pair token**
-
-Start a (git) bash shell *and generate a secret key pair with your student email adress
-
-```sh
-ssh-keygen -t Ed25519 -C {your@student.email.com}
-```
-
-</li>
-
-<li>
-
-**Transfer your <b>public</b> key to Github**
-
-If you installed the GitHub client, you can authenticate with the following command in the terminal and select ssh for authentication
-
-```sh
-gh auth login
-```
-
-otherwise enter the following in (git) bash shell to view the contents of your public key
-
-```sh
-cat ~/.ssh/id_ed25519.pub
-```
-and paste this in the text area when adding a [new ssh key in GitHub](https://github.com/settings/ssh/new)
-
-</li>
-
-<li>
-
 **Create a fork of this repository**
 
 Create a fork of MitwRdam/MakeAIWork in [GitHub](https://github.com/MitwRdam/MakeAIWork2) or
