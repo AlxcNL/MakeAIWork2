@@ -240,17 +240,6 @@ Download and install [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
 
 </li>
 
-
-<li>
-
-Install venv (Ubuntu)
-
-```sh
-sudo apt install python3.10-venv
-```
-
-</li>
-
 <li>
 
 Windows
@@ -269,10 +258,17 @@ install/create_virtual_env.sh
 
 </li>
 
-</ol>
+<li>
 
-***NOTE***
-We only run Python directly on the host to sue the webbrowser module. For ad Docker Workaround on Windows, you need to install the Ubuntu in Windows sub-system.
+Install Python libraries
+
+```bash
+install/install_requirements.sh
+```
+
+</li>
+
+</ol>
 
 </li>
 
