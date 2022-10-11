@@ -152,7 +152,7 @@ and paste this in the text area when adding a [new ssh key in GitHub](https://gi
 
 **Create a fork of this repository**
 
-Create a fork of MitwRdam/MakeAIWork in [GitHub](https://github.com/MitwRdam/MakeAIWork) or
+Create a fork of MitwRdam/MakeAIWork in [GitHub](https://github.com/MitwRdam/MakeAIWork2) or
 use the GitHub Client by entering the following commands in your terminal
 
 ```bash
