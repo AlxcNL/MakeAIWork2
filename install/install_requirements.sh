@@ -15,7 +15,6 @@ function installWithConda {
     echo "Try to install basic Python requirements without Miniconda\n"
     installWithoutConda
   else
-    conda init && conda activate
     conda install --yes -c conda-forge \
       beautifulsoup4 \
       jupyter_core \
@@ -36,7 +35,7 @@ function installWithConda {
       selenium \
       statsmodels \
       sympy \
-      tensorflow=2.8
+      tensorflow
   fi
 
 }

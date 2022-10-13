@@ -16,9 +16,4 @@ seaborn
 selenium 
 statsmodels 
 sympy
-tensorflow
-tensorboard-plugin-wit 
-tensorflow_addons 
-tensorflow_datasets 
-tensorflow-estimator 
-tensorflow_hub 
+tensorflow==2.8
