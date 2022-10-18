@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import random
 
 class Dobbelsteen:
@@ -5,6 +7,8 @@ class Dobbelsteen:
     def __init__(self):
         self.values = set(range(1, 7))  
         self.roll()
+        
+        # https://realpython.com/python-dice-roll
         self.faces = {
 
             1: (

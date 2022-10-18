@@ -31,7 +31,7 @@ rm -r {project_directory}/__pycache__
 Map p2 aanmaken en daarin alle code en data kopieren
 
 ```bash
-mkdir p2 && cp -r simpylc p2/ && cp -r simulations p2/
+mkdir p2 && cp -r {project_directory} p2/
 ```
 
 Map p2 toevoegen en committen met git
