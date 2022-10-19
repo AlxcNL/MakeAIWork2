@@ -19,7 +19,7 @@ sqlite3 Chinook.db
 **Probeer een eenvoudige query**
 ```sql
 select * 
-from FROM Artist 
+from Artist 
 limit 10;
 ```
 
@@ -66,7 +66,8 @@ c.customerid = i.customerid
 
 **Provide a query showing only the Employees who are Sales Agents**
 ```sql
-select * from employee
+select * 
+from employee
 where employee.title = 'Sales Support Agent';
 ```
 </li>
@@ -88,15 +89,10 @@ c.customerid = i.customerid;
 ```sql
 select e.*, count(c.customerid) as 'TotalCustomers'
 from employee as e
-	join customer as c on e.employeeid = c.supportrepid
+join customer as c on e.employeeid = c.supportrepid
 group by e.employeeid
 ```
 
-**Provide a query that shows the total sales per country**
-<br>Which country's customers spent the most?
-```sql
-select i.billingcountry, sum(total) as 'TotalSales'
-from invoice as i
-group by billingcountry
-order by totalsales desc
-```
+</li>
+	
+</ol>	
