@@ -93,11 +93,6 @@ from employee as e
 group by e.employeeid
 ```
 
-**Provide a query that shows the total sales per country**
-<br>Which country's customers spent the most?
-```sql
-select i.billingcountry, sum(total) as 'TotalSales'
-from invoice as i
-group by billingcountry
-order by totalsales desc
-```
+</li>
+	
+</ol>	
