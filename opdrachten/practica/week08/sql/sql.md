@@ -66,7 +66,8 @@ c.customerid = i.customerid
 
 **Provide a query showing only the Employees who are Sales Agents**
 ```sql
-select * from employee
+select * 
+from employee
 where employee.title = 'Sales Support Agent';
 ```
 </li>
