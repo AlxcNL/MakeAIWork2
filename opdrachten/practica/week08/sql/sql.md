@@ -19,7 +19,7 @@ sqlite3 Chinook.db
 **Probeer een eenvoudige query**
 ```sql
 select * 
-from FROM Artist 
+from Artist 
 limit 10;
 ```
 
