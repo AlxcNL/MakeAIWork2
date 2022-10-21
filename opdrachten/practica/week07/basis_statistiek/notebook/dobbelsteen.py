@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 
 import random
+import numpy as np
 
 class Dobbelsteen:
     
     def __init__(self):
+        self.history = list()
         self.values = set(range(1, 7))  
         self.roll()
         
@@ -74,12 +76,20 @@ class Dobbelsteen:
 
     def roll(self):
         self.number = random.choice(self.getList())
+        self.history.append(self.number)
+        
+    # def oneThousandRolls(self):
+    #     for _ in range(0,1000): 
+    #         return self.roll()    
 
     def getNumber(self):
         return self.number
 
     def show(self):        
         return str(self.faces.get(self.number))
+    
+    def getHistory(self):
+        return np.array(self.history)
 
 def main():
     d = Dobbelsteen()
