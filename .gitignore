@@ -130,7 +130,6 @@ dmypy.json
 .DS_Store
 opdrachten/practica/week07/image_recognition/notebook/datasets/
 .gitignore
-notebooks/
 solutions/
 opdrachten/practica/week07/image_recognition/notebook/numpy_opdracht2_solutions.ipynb
 .vscode/launch.json
@@ -139,3 +138,4 @@ opdrachten/practica/week07/beeldherkenning/notebook/~/tensorflow_datasets
 opdrachten/practica/week07/beeldherkenning/notebook/csv/mnist_train.csv
 opdrachten/practica/week08/sql/Chinook.db
 cursisten/
+opdrachten/practica/week13
