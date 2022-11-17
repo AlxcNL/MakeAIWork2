@@ -1,0 +1,12 @@
+1	To which class does the batch belong?
+1	Has this batch been classified?
+1	Has the batch been rejected?
+1	This batch has been classified as class {}.
+2	How many scabbed apples are in this batch?
+2	What is the amount of healthy apples?
+2	Does the batch contain rotten apples?
+2	The batch consists of {} healthy, {} blotch, {} rotten and {} scabbed apples.
+3	What is the percentage of apples with diseases?
+3	What is the percentage of healthy apples?
+3	How many apples from the batch are healthy?
+3	The percentage of apples with diseases is {}.
