@@ -97,6 +97,9 @@ def bag_of_words(s, words):
             
     return numpy.array(bag)
 
+# def replaceResponse():
+    
+#     "The batch contains {scabApple} apples with scabs, this is {scabPercentage}% of the batch."
 
 def chat():
     print("Start talking with Botnita Applebum (type quit to stop)!")
