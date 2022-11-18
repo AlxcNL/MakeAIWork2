@@ -99,7 +99,7 @@ def bag_of_words(s, words):
 
 
 def chat():
-    print("Start talking with the bot (type quit to stop)!")
+    print("Start talking with Botnita Applebum (type quit to stop)!")
     while True:
         inp = input("You: ")
         if inp.lower() == "quit":
