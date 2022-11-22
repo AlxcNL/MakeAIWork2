@@ -1,0 +1,65 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up"],
+         "responses": ["Hello, how can I help you?", "Good to see you again! What is your question?", "Hi there, how can I help?", "I'm Bonita Applebum, apples turn me on! What would you like to know about the batch?", "I'm yum yum, Bonita Applebum. Ask me anything about them apples."],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
+         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!", "Bum bum, Bonita Applebum", "An apple a day, keeps the doctor away"],
+         "context_set": ""
+        },
+        {"tag": "batch",
+         "patterns": ["How has the batch been qualified?", "What is the classification of the batch?", "How is the batch rated?", "What class?", "How big was the batch?", "How many apples are in the batch?"],
+         "responses": ["The batch was classified as (classOne).", "The batch contains (sampleBatch) apples.", "The batch consisted of (sampleBatch) apples in total.", "The batch has been rated as (classThree).", "This is a (classTwo) batch."],
+         "context_set": ""
+        },
+        {"tag": "classification",
+         "patterns": ["What classification?", "what is the class of the batch?", "How rated?", "What rating?", "Which quality?", "What is the classification of the batch?"],
+         "responses": ["The classification of the batch is (classOne).", "The batch has been rated as (classTwo).", "This is a (classThree) batch."],
+         "context_set": ""
+        },
+        {"tag": "quality",
+         "patterns": ["What is the quality of the batch?", "Which quality?", "Is the batch any good?", "Which quality classification?", "Which quality class?"],
+         "responses": ["This batch has been classified as (classOne).", "This batch has been classified as (classTwo).", "This batch has been classified as (classThree).", "This batch has been classified as (classRej).","The batch has been rejected."],
+         "context_set": ""
+        },
+        {"tag": "healthy",
+         "patterns": ["How many normal apples are in the batch?", "How many healthy apples were counted?", "Which percentage is normal?"],
+         "responses": ["There are (appleScore) normal apples in this batch", "The batch contains (appleScore) healthy apples, this is (healthyPercentage)% of the total batch.", "The healthy percentage is (healthyPercentage)."],
+         "context_set": ""
+        },
+        {"tag": "blotch",
+         "patterns": ["How many blotch apples are in the batch?", "How many apples with blotches were counted?", "Which percentage is blotched?"],
+         "responses": ["There are (blotchApple) blotch apples in this batch", "The batch contains (blotchApple) apples with blotch, this is (blotchPercentage)% of the batch.", "Blotch was found on (blotchPercentage)% of the batch."],
+         "context_set": ""
+        },
+        {"tag": "rot",
+         "patterns": ["Which amount of apples has rot?", "How many apples with rot did you count?", "What is the percentage that is rotten?"],
+         "responses": ["In (rotApple) apples rot was found in this batch", "(rotPercentage)% of the batch contains rot, there are (rotApple) rotten apples.","In this batch exactly (rotApple) apples with rot were detected."],
+         "context_set": ""
+        }, 
+        {"tag": "happy",
+         "patterns": ["How many apples with happy are in the batch?", "How many happy apples were counted?", "Which percentage has happy?"],
+         "responses": ["There are happy apples in this batch", "The batch contains 5 apples with happy, this is -4% of the batch.","Happy can be found in happy apples in the batch."],
+         "context_set": ""
+        }, 
+        {"tag": "scab",
+        "patterns": ["How many apples with scabs are in the batch?", "How many scabbed apples were counted?", "Which percentage of the batch is scabbed?"],
+        "responses": ["There are (scabApple) scabbed apples in this batch", "The batch contains (scabApple) apples with scabs, this is (scabPercentage)% of the batch.", "Scabs were found on (scabPercentage)% of the batch."],
+        "context_set": ""
+        },
+        {"tag": "rejected",
+         "patterns": ["How many apples in the batch are rejected?", "How many rejected apples were counted?", "Which percentage of the batch is diseased?"],
+         "responses": ["The batch has been rejected.", "The batch is completely unsuitable and will be composted.", "The batch contains (scabApple) apples with scabs, this is (scabPercentage)% of the batch.", 
+         "With (rotApple) rotten, (blotchApple) blotched and (scabApple) scabbed apples, a total of (rejectedPercentage)% damage makes the batch completely unsuitable for consumption or further processing."],
+         "context_set": ""
+        }
+   ]
+}
+
+
+
+
+
+
