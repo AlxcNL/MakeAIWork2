@@ -6,8 +6,8 @@ function createVirtualEnv {
         echo "Virtual environment env already exists"
     else
         echo "Create virtual environment env"
-        python -m pip install virtualenv
-        python -m venv env 
+        python -m pip install virtualenv || python2 -m pip install virtualenv
+        python -m venv env || python3 -m venv env 
     fi	
 
     echo "Activate virtual environment env"
@@ -30,7 +30,7 @@ function createCondaEnv {
     if (! command -v "conda" &> /dev/null ) then
         createVirtualEnv
     else
-        conda init zsh
+        conda init zsh && conda activate miw    
     fi
 
 }

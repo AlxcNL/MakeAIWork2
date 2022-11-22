@@ -1,5 +1,6 @@
 Pillow
 SimPyLC==3.10.0
+ansible
 bert-extractive-summarizer
 deel-datasets
 ipywidgets
