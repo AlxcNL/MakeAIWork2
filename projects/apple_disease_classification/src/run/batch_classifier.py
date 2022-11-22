@@ -4,7 +4,8 @@
 
 # IMPLEMENT RUNNABLE CODE INSIDE THIS MAIN 
 def main():
-    pass
+    print("Hello world")
+    # pass
 
 # DO NOT IMPLEMENT ANYTHING HERE
 if __name__ == main():
