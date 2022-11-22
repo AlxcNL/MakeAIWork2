@@ -27,3 +27,9 @@ body {
   left:50%;
   transform: translate(-102%, -50%);
 }
+
+.wrapingimage
+{
+float: below; 
+margin: 30px 12px 3px 4px; 
+} 

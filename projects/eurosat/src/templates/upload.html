@@ -1,40 +1,52 @@
 //templates/upload.html
 <html>
-<head>
-<title>Python Flask Upload multiple images and display multiple images uploaded</title>
-</head>
-<body>
-<div style="padding:20px;">
-<h2>Python Flask Upload multiple images and display multiple images uploaded</h2>
-<p>
-    {% with messages = get_flashed_messages() %}
-      {% if messages %}
-        <ul class=flashes>
-        {% for message in messages %}
-          <li>{{ message }}</li>
-        {% endfor %}
-        </ul>
-      {% endif %}
-    {% endwith %}
-</p>
-<form method="post" action="/" enctype="multipart/form-data">
-    <dl>
-        <p>
-            <input type="file" name="files[]" multiple="true" autocomplete="off" required>
-        </p>
-    </dl>
-    <p>
-        <input type="submit" value="Submit">
-    </p>
-</form>
- 
-{% if filenames %}
-    {% for filename in filenames %}
-        <div style="padding:20px;float:left;">
-            <img width="500" src="{{ url_for('display_image', filename=filename) }}"> 
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <link rel="stylesheet" href="static/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="static/script.js"></script>
+    
+        <title>Python Flask Upload multiple images and display multiple images uploaded</title>
+    </head>
+
+    <body>
+        <div style="padding:20px;">
+            <h2>Python Flask Upload multiple images and display multiple images uploaded</h2>
+            <p>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul class=flashes>
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+                {% endwith %}
+            </p>
+            <form method="post" action="/" enctype="multipart/form-data">
+                <dl>
+                    <p>
+                        <input type="file" name="files[]" webkitdirectory directory multiple autocomplete="off" required/>
+                    </p>
+                </dl>
+                <p>
+                    <input type="submit" value="Submit">
+                </p>
+            </form>
+        
+            {% if filenames and labels %}
+            {% for i in range(0, [filenames|length, 80]|min) %}
+                    <div style="padding:20px;float:left;" class="wrapingimage">                        
+                        <img width="200" height="200" src="{{ url_for('display_image', filename=filenames[i]) }}" onclick="clicked_img(this)"> 
+                        <p>{{labels[i]}}</p>
+                    </div>
+                {% endfor %}
+            {% endif %}
+
         </div>
-    {% endfor %}
-{% endif %}
-</div>
-</body>
+    </body>
 </html>
