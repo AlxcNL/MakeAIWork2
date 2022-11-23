@@ -23,3 +23,7 @@ tensorflow_datasets
 tensorflow-estimator 
 tensorflow_hub
 widgetsnbextension
+bert-extractive-summarizer
+sentence-transformers
+spacy
+transformers

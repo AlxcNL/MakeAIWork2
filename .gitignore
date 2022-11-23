@@ -131,7 +131,6 @@ dmypy.json
 .DS_Store
 opdrachten/practica/week07/image_recognition/notebook/datasets/
 .gitignore
-notebooks/
 solutions/
 opdrachten/practica/week07/image_recognition/notebook/numpy_opdracht2_solutions.ipynb
 .vscode/launch.json
@@ -139,3 +138,9 @@ opdrachten/practica/week07/image_recognition/notebook/pics/2750/
 opdrachten/practica/week07/beeldherkenning/notebook/~/tensorflow_datasets
 opdrachten/practica/week07/beeldherkenning/notebook/csv/mnist_train.csv
 opdrachten/practica/week08/sql/Chinook.db
+projects/apple_disease_classification/notebooks/datasets/flower_photos
+projects/apple_disease_classification/augmented_data
+projects/apple_disease_classification/notebooks/chatterbot/chats.txt
+projects/apple_disease_classification/notebooks/chatterbot/chatterbot_my_file.py
+projects/apple_disease_classification/notebooks/chatterbot/chatterbot.ipynb
+projects/apple_disease_classification/aql_data
