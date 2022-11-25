@@ -1,4 +1,3 @@
-//templates/upload.html
 <html>
     <head>
         <meta charset="utf-8">
@@ -10,12 +9,21 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="static/script.js"></script>
     
-        <title>Python Flask Upload multiple images and display multiple images uploaded</title>
+        <title>EuroSat</title>
+        <a href="https://it-omscholing.nl/locaties/hogeschool-rotterdam/">
+            <div>
+            <a><img src='static/banner.PNG'/></a>
+            </div>
+            <div>
+            <img src='static/miw.PNG'/>
+            <em>Author: Jeroen Boogaard</em>
+            </div>
+        </a>    
     </head>
 
     <body>
         <div style="padding:20px;">
-            <h2>Python Flask Upload multiple images and display multiple images uploaded</h2>
+            <h1>Eurosat Classifier in Flask</h1>
             <p>
                 {% with messages = get_flashed_messages() %}
                 {% if messages %}
@@ -41,8 +49,9 @@
             {% if filenames and labels %}
             {% for i in range(0, [filenames|length, 80]|min) %}
                     <div style="padding:20px;float:left;" class="wrapingimage">                        
-                        <img width="200" height="200" src="{{ url_for('display_image', filename=filenames[i]) }}" onclick="clicked_img(this)"> 
-                        <p>{{labels[i]}}</p>
+                        <img width="200" height="200" src="{{ url_for('display_image', filename=filenames[i]) }}">
+                        <p>{{filenames[i]}}</p>
+                        <!-- p>{{labels[i]}}</p -->
                     </div>
                 {% endfor %}
             {% endif %}
