@@ -143,3 +143,7 @@ projects/eurosat/data/labeled
 .vscode
 exp
 projects/eurosat/src/static/uploads
+projects/eurosat/src/node_modules
+projects/eurosat/src/package-lock.json
+ ../.idea/
+projects/eurosat/.idea/
