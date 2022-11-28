@@ -16,3 +16,4 @@ seaborn
 selenium 
 statsmodels 
 sympy
+tensorflow==2.8

@@ -1,30 +1,9 @@
 #!/usr/bin/env bash
 
-# # Activate virtual environment env
-# source env/bin/activate
-
-function createVirtualEnv {
-  echo "Create virtualenv"
-  python -m pip install virtualenv
-  python -m venv env 
-  echo "Activate virtualenv"
-  source env/Scripts/activate
-
-  echo "Add virtual environment actionvation to bashrc"
-  activationPath=$(cygpath ${PWD}/env/Scripts/activate)
-  echo "source ${activationPath}" > ~/.bashrc
-
-}
-
 function installWithoutConda {
   echo "Install without conda"
-  createVirtualEnv
 
-  # Upgrade pip
-  python -m pip install --upgrade pip
-
-  # Install setuptools
-  python -m pip install setuptools
+  echo "Install requierments with pip"
   python -m pip install --no-cache-dir -r install/pip/no_conda.txt
 
 }  
@@ -48,7 +27,7 @@ function installWithConda {
       pandas \
       py-cpuinfo \
       pyopengl \
-      pytables \
+      pytables  \
       scikit-image \
       scikit-learn \
       scipy \
@@ -65,11 +44,11 @@ function installWithConda {
 function installWithPip {
   echo "Install with pip"
 
-  # Upgrade pip
-  python -m pip install --upgrade pip
-
-  # Install setuptools
+  echo "Prepare pip"
+  python -m pip install --upgrade pip    
   python -m pip install setuptools
+
+  echo "Install requierments with pip"
   python -m pip install --no-cache-dir -r install/pip/requirements.txt
 
 }
@@ -79,19 +58,20 @@ unameOut="$(uname -s)"
 os="${unameOut:0:7}"
 case "${os}" in
     Linux*)     
-      installWithConda \
-        && installWithPip
+      installWithConda
+      installWithPip
     ;;
     # MacOS
     Darwin*)
-      installWithConda \
-        && installWithPip
+      installWithConda
+      installWithPip
     ;;
     # Git Bash
     MINGW*)     
-      createVirtualEnv && installWithoutConda && installWithPip
+      installWithoutConda
+      installWithPip
     ;;
     *)          
-      installWithoutConda \
-        && installWithPip
+      installWithoutConda
+      installWithPip
 esac
