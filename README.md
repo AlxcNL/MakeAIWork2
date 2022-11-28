@@ -239,12 +239,6 @@ install/install_requirements.sh
 
 </ol>
 
-</li>
-
-</li>
-
-</ol>
-
 ### Edit with Visual Studio Code
 
 <ol>
