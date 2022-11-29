@@ -139,7 +139,6 @@ opdrachten/practica/week07/beeldherkenning/notebook/csv/mnist_train.csv
 opdrachten/practica/week08/sql/Chinook.db
 cursisten/
 eurosat/src/static/uploads
-projects/eurosat/data/labeled
 .vscode
 exp
 projects/eurosat/src/static/uploads
@@ -147,3 +146,4 @@ projects/eurosat/src/node_modules
 projects/eurosat/src/package-lock.json
  ../.idea/
 projects/eurosat/.idea/
+projects/eurosat/data
