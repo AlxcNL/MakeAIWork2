@@ -36,7 +36,6 @@ function installWithConda {
       selenium \
       statsmodels \
       sympy \
-      tensorflow==2.8
   fi
 
 }

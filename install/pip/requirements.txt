@@ -21,10 +21,5 @@ seaborn
 sentence-transformers
 sklearn
 spacy
-tensorboard-plugin-wit
-tensorflow-estimator
-tensorflow_addons
-tensorflow_datasets
-tensorflow_hub
 transformers
 widgetsnbextension
