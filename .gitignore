@@ -147,3 +147,4 @@ projects/eurosat/src/package-lock.json
 projects/eurosat/.idea/
 projects/eurosat/data
 project/simpylc/simulations
+project/simpylc/default.samples
