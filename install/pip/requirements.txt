@@ -1,4 +1,6 @@
 Pillow
+PyOpenGL==3.1.6
+PyOpenGL-accelerate==3.1.6
 SimPyLC==3.10.0
 ansible
 bert-extractive-summarizer
@@ -13,9 +15,6 @@ numpy
 numpy
 pandas
 ptpython
-pyspark
-pyspark
-python-spark-reader-library
 scipy
 seaborn
 sentence-transformers

@@ -4,7 +4,7 @@ function installWithoutConda {
   echo "Install without conda"
 
   echo "Install requierments with pip"
-  python -m pip install --no-cache-dir -r install/pip/no_conda.txt
+  python -m pip install --upgrade pip --no-cache-dir -r install/pip/no_conda.txt
 
 }  
 
@@ -17,7 +17,6 @@ function installWithConda {
   else
     conda install --yes -c conda-forge \
       beautifulsoup4 \
-      flask \
       jupyter_core \
       jupyterlab \
       keras \
@@ -27,7 +26,6 @@ function installWithConda {
       Pillow \
       pandas \
       py-cpuinfo \
-      pyopengl \
       pytables  \
       scikit-image \
       scikit-learn \
@@ -35,7 +33,7 @@ function installWithConda {
       seaborn \
       selenium \
       statsmodels \
-      sympy \
+      sympy
   fi
 
 }

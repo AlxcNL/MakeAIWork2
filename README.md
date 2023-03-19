@@ -4,13 +4,27 @@
 
 ### OpenGL 
 
-For the Simulation Project you need an OpenGL environment.
+For the Simulation Project you need to setup an OpenGL environment.
 
 <ol>
 
 <li>
 
-**Install XQuartz X.Org Window System**
+**Install freeglut library (Windows only)**
+
+<p>
+Start Git Bash as Administrator an run the following command 
+
+```bash
+install/install_freeglut.sh
+```
+</p>
+
+</li>
+
+<li>
+
+**Install XQuartz X.Org Window System (MacOS only)**
 On the MacOS host, we use xquartz to provide us with a MacOS X Window System.<br>
 Download and install [xquartz](https://www.xquartz.org/)<br>
 Log out and Log in to activate the changes the terminal
@@ -25,17 +39,21 @@ Log out and Log in to activate the changes the terminal
 
 <li>
 
-Get your IP address
+***Get your IP address***
 
+<p>
 Run the following command in the terminal to see your IP address
 
 ```bash
 ifconfig en0 | grep 'inet ' | awk '{print $2}'
 ```
+</p>
 
 <li>
 
-Start XQuartz
+<p>
+
+***Start XQuartz***
 
 ```bash
 open -a XQuartz
@@ -47,12 +65,12 @@ which will open a XQuartz terminal in which you enter
 xhost {Your IP}
 ```
 
+having {Your IP} replaced with your IP-address.
+
+</p>
+
 Click on the word 'XQuartz' on the top left of your screen (next to the Apple logo) and select <i>Preference</i>. Open the tab
 <i>Security</i> and check 'Allow connections from network clients'
-
-</li>
-
-</ol>
 
 </li>
 
@@ -67,9 +85,35 @@ brew install socat
 
 </li>
 
+</ol>
+
+</li>
+
 <li>
 
-**Test by running a Python script with GUI**
+**Generate the simulation modules**
+
+<p>Run the following command at <i>project/simpylc</i>
+
+``sh
+./generate_simulations.sh
+``
+
+</p>
+
+</li>
+
+<li>
+
+**Test the GUI**
+
+<p>Run the following command at <i>project/simpylc</i>
+
+``sh
+./start_client.sh
+``
+
+</p>
 
 </li>
 
