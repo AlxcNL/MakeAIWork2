@@ -2,146 +2,140 @@
 
 ## Projects
 
----
+### OpenGL 
 
-## Python AI Workspace Installation
-Watch [instruction videos at YouTube](https://youtube.com/playlist?list=PLf5zREwsIjUNQ2y4TGi9F0uXQZ1B08d_v)
-
-
-### Clone this Git repository
-To be able to use this repository and handover your code, you need to have remote access to Github.
+For the Simulation Project you need an OpenGL environment.
 
 <ol>
 
 <li>
 
-**Install Git**
-
-Make sure you select "Checkout as-is, commit Unix-style line endings" during the installation process.
-
-<ul>
-
-<li>
-
-[Git for Windows](https://gitforwindows.org/)
+**Install XQuartz X.Org Window System**
+On the MacOS host, we use xquartz to provide us with a MacOS X Window System.<br>
+Download and install [xquartz](https://www.xquartz.org/)<br>
+Log out and Log in to activate the changes the terminal
 
 </li>
 
 <li>
 
-[Git for Mac](https://git-scm.com/download/mac)
+**Configure XQuartz to allow network connections from host**
 
-</li>
-
-</ul>
+<ol>
 
 <li>
 
-**Install [GitHub CLI](https://cli.github.com/) (MacOS and Ubuntu)**
+Get your IP address
+
+Run the following command in the terminal to see your IP address
 
 ```bash
-brew install gh
+ifconfig en0 | grep 'inet ' | awk '{print $2}'
 ```
-
-[Installation instructions on Ubuntu](https://www.techiediaries.com/install-github-cli-ubuntu-20/ )
-
-[Installation instructions on Ubuntu](https://www.techiediaries.com/install-github-cli-ubuntu-20/)
-
-***NOTE***<br>
-Although you could download and install GitHub CLI for Windows, I don't recommend it since it does not properly work in Git Bash.
-
-</li>
 
 <li>
 
-**Install [Homebrew](https://brew.sh/) (MacOS only)**
+Start XQuartz
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+open -a XQuartz
 ```
 
-</li>
-
-<li>
-
-**Install [iterm2](https://iterm2.com/) (MacOS)**
-
-```bash
-brew install iterm2
-```
-
-</li>
-
-<li>
-
-**Install zsh (MacOS and Ubuntu)**
-
-<ul>
-
-<li>
-
-Install [zsh](https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/) on MacOS using
-
-```bash
-brew install zsh
-```
-
-In Ubuntu
-```bash
-sudo apt install zsh
-```
-
-</li>
-
-<li>
-
-Add iTerm2 path to zsh profile
-
- ```bash
-echo "eval \"\$(homebrew/bin/brew shellenv)\"" >> ~/.zshrc
-```
-
-</li>
-
- <li>
-
-**(Optional) Install oh-my-zsh (MacOS and Ubuntu)**
-
-```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
-
-</li>
-
-</ul>
-
-</li>
-
-<li>
-
-**Create a fork of this repository**
-
-Create a fork of AlxcNL/MakeAIWork2 in [GitHub](https://github.com/AlxcNL/MakeAIWork2) or
-use the GitHub Client by entering the following commands in your terminal
-
-```bash
-gh repo fork https://github.com/AlxcNL/MakeAIWork2
-```
-</li>
-
-<li>
-
-**Clone your <b>fork</b>**
-If you installed the GitHub client, you can authenticate with the following command in the terminal
+which will open a XQuartz terminal in which you enter
 
 ```sh
-gh repo clone git@github.com:{your_github_username}/MakeAIWork2.git
+xhost {Your IP}
 ```
 
-otherwise enter the following command in your (git)bash shell after replacing {your_github_username} with your GitHub username.
-```sh
-git clone git@github.com:{your_github_username}/MakeAIWork2.git
+Click on the word 'XQuartz' on the top left of your screen (next to the Apple logo) and select <i>Preference</i>. Open the tab
+<i>Security</i> and check 'Allow connections from network clients'
+
+</li>
+
+</ol>
+
+</li>
+
+<li>
+
+**Install Socat**
+The graphical Python script runs with a Linux X Window System in a Docker container. To connect this to the MacOS X Window System on the host we use the [command line utility socat](https://linux.die.net/man/1/socat).
+
+```bash
+brew install socat
 ```
+
+</li>
+
+<li>
+
+**Test by running a Python script with GUI**
+
+</li>
+
+</ol>
+
+---
+
+## Python AI Workspace Installation
+
+<ol>
+
+<li>
+
+**Create your own repository MakeAIWork2 on Github**
+
+<p>
+Browse to <a>github.com</a> and create <u>public</u> repository MakeAIWork2.
+</p>
+
+</li>
+
+<li>
+
+**Share your repository with the teachers**
+
+<p>Post the link to your remote repository MakeAIWork2 in <u>your private Teams channel</u></p>
+
+</li>
+
+<li>
+
+**Clone your git repository**
+
+<p>
+Clone your git repository MakeAIWork2 from Github to <u>the parent directory of MakeAIWork</u>
+</p>
+
+</li>
+
+<li>
+
+**Download and copy subfolders of this repository**
+
+<p>
+Download this repository as zip-file and extract the contents (files and subdirectories) from the zip-file to your (own) local git directory MakeAIWork2.
+</p>
+
+</li>
+
+<li>
+
+**Add and commit copied contents**
+
+<p>
+
+Add and commit the contents to your (own) remote github repository
+
+Run the following commands from your MakeAIWork2 directory
+
+```sh
+git add .
+git commit -m "Added contents for MakeAIWork2"
+git push
+```
+
+</p>
 
 </li>
 
@@ -159,64 +153,12 @@ This script will also set the [pull policy](https://www.git-scm.com/docs/git-pul
 
 </li>
 
-<li>
-
-**Add upstream to original remote repository**
-
-To be able To be able to fetch and merge changes from this repository using (bash) commands, you need to have a (second) upstream.  
-If you used the GitHub client to create the fork you can <strong>skip</strong> this step, otherwise enter the following commands
-
-```bash
-git remote add AlxcNL https://github.com/AlxcNL/MakeAIWork2
-```
-
-</li>
-
-<li>
-
-Keep your fork repository up-todate by regularly pulling changes from the original remote repository into your local fork..
-
-```bash
- git pull AlxcNL main
-```
-
-and push the changes to you remote fork
-
-```bash
-git push
-```
-
-</li>
 
 </ol>
 
-
-**Install python**
+**Python (virtual) workspace**
 
 <ol>
-
-<li>
-
-Install [python](https://www.python.org/downloads/release/python-3105/)
-
-</li>
-
-<li>
-
-Install Miniconda (MacOS and Linux)
-
-Download and install [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
-
-</li>
-
-<li>
-
-Windows
-```sh
-install/init_git_bash_profile.sh
-```
-
-</li>
 
 <li>
 
@@ -239,63 +181,63 @@ install/install_requirements.sh
 
 </ol>
 
-### Edit with Visual Studio Code
+*Install Docker Desktop*
+To facilitate you with a managed portable [isolated](https://learndocker.online/introduction/the-whats-and-whys/what-are-containers/) [Development Environment]((https://learndocker.online/introduction/the-whats-and-whys/why-docker-for-devs)), we provide a Docker image in which all dependencies are preinstalled. We prefer Docker for isolation since it is a much lighter solution than [Virtual Machine](https://learndocker.online/introduction/the-whats-and-whys/containers-vs-vms/).
 
 <ol>
 
 <li>
 
-Install [Visual Studio Code](https://code.visualstudio.com)
+**Download and install [Docker Desktop](https://www.docker.com/get-started)**
 
-</li>
-
-<li>
-
-**Enable VSCode to be opened from the command line (macOS only)**
-
-In VSCode, open the Command Palette and type 'shell command' in order to select the Shell command: Install ‘code’ command in PATH
-
-</li>
+[Download for Mac with Apple M* chip](https://docs.docker.com/desktop/mac/apple-silicon/)
 
 <li>
 
-**Start vscode with command from current directory**
+**Configure Docker Desktop**
 
-Start a (git) bash shell and enter directory MakeAIWork2, from there use the command <i>code</i> to start vscode.
-```sh
-cd MakeAIWork2
-code .
+Open Docker Desktop, go to settings and select <i>Start when you login</i>
+
+In Windows you can a script to enable Docker Desktop to start directly after you start Git Bash:
+
+```bash
+sh/git_bash_profile.sh
 ```
 
+this script will also navigate automatically to the MakeAIWork directory.
+
+### Visual Studio Code Configuration
+
+<ol>
+
+**Install Python extensions**
+
+<li>
+
+Install the [Git Easy extension](https://marketplace.visualstudio.com/items?itemName=bibhasdn.git-easy)
+
 </li>
 
 <li>
 
-**Install the Python extension**
-
-Download and install the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+Install the [Mermaid extension](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid)
 
 </li>
 
 <li>
 
-**Install the Git Bash plugin (Windows)**
+Install the [Docker extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
+)
 
 </li>
 
 <li>
 
-**Install Live Share**
-
-Follow the instructions at [Collaborate with Live Share](https://code.visualstudio.com/learn/collaboration/live-share)
+Install the [MongoDB extension](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode) (Periode 3)
 
 </li>
 
 </ol>
-
----
-
-## Python AI Workspace Usage
 
 ---
 ### References
