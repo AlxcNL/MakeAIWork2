@@ -20,5 +20,8 @@ seaborn
 sentence-transformers
 sklearn
 spacy
+torch
+torchvision 
+torchaudio
 transformers
 widgetsnbextension
