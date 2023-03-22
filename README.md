@@ -187,13 +187,7 @@ git push
 
 **Configure git**
 
-In order to commit and push your changes, you need identitify yourself.
-
-Open a (git)bash, enter directory MakeAIWork2 and run:
-```bash
-install/git_config.sh {your_github_username} {your@student.email.com}
-```
-This script will also set the [pull policy](https://www.git-scm.com/docs/git-pull) to rebase.
+<p>Deselect the options <i>Start Docker Desktop when you log in</i> and <i>Use Virtualization framework</i>
 
 </li>
 
