@@ -1,7 +1,4 @@
 Pillow
-PyOpenGL==3.1.6
-PyOpenGL-accelerate==3.1.6
-SimPyLC==3.10.0
 ansible
 bert-extractive-summarizer
 deel-datasets
