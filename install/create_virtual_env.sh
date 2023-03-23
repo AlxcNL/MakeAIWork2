@@ -30,7 +30,10 @@ function createCondaEnv {
     if (! command -v "conda" &> /dev/null ) then
         createVirtualEnv
     else
-        conda init zsh && conda activate miw    
+        conda clean -p
+        conda init  $(echo $SHELL | cut -f 3 -d '/') 
+        conda create -n miw2
+        conda activate miw2
     fi
 
 }
