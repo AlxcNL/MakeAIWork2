@@ -8,7 +8,6 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
 develop-eggs/
 dist/
 downloads/
@@ -47,7 +46,6 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *.cover
-*.py,cover
 .hypothesis/
 .pytest_cache/
 
@@ -133,9 +131,5 @@ opdrachten/practica/week07/image_recognition/notebook/datasets/
 solutions/
 opdrachten/practica/week07/image_recognition/notebook/numpy_opdracht2_solutions.ipynb
 .vscode/launch.json
-opdrachten/practica/week07/image_recognition/notebook/pics/2750/
-opdrachten/practica/week07/beeldherkenning/notebook/~/tensorflow_datasets
-opdrachten/practica/week07/beeldherkenning/notebook/csv/mnist_train.csv
-opdrachten/practica/week08/sql/Chinook.db
-cursisten/
-opdrachten/practica/week13
+scursisten/
+projects/eurosat
