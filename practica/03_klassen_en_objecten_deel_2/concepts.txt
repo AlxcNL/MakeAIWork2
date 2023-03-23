@@ -1,0 +1,8 @@
+Activation function
+Bias
+Weight vector
+Class labels
+
+DocString
+Numpy Array
+default arguments
