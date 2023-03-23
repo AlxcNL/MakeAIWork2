@@ -1,0 +1,2 @@
+Project 1 - Autonoom voertuig:
+    De folder waarin de auto simulatie staat heet "car", dus niet "car_neural_nets"
