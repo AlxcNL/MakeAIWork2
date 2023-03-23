@@ -157,3 +157,4 @@ project/simpylc/start_client.sh
 project/simpylc/start_world.sh
 project/simpylc/test_agent.sh
 project/simpylc/test_client.sh
+.idea/
