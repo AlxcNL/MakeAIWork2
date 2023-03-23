@@ -1,17 +1,28 @@
 #!/usr/bin/env python
 
 from perceptron import Perceptron
+import itertools
 import logging
 import numpy as np
 
 logging.basicConfig(level=logging.DEBUG)
 
-# TODO refactor using Itertools
+# # TODO refactor using Itertools
+# xTrain = np.array(
+#     [
+#         [0, 0], [0, 1], [1, 0], [1, 1]
+#     ]
+# )
+
+possibleOutcomes = [0, 1]
 xTrain = np.array(
     [
-        [0, 0], [0, 1], [1, 0], [1, 1]
+        element for element in itertools.product(possibleOutcomes, possibleOutcomes)
     ]
 )
+
+logging.debug(f"xTrain : {xTrain}")
+
 yTrain = np.array([0, 0, 0, 1])
 
 p = Perceptron()
