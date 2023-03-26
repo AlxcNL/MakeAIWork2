@@ -158,3 +158,4 @@ project/simpylc/start_world.sh
 project/simpylc/test_agent.sh
 project/simpylc/test_client.sh
 .idea/
+project/simpylc/default.samples
