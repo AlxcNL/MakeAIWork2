@@ -134,3 +134,5 @@ scursisten/
 projects/eurosat
 .idea/vcs.xml
 diagrams/mindmap_python-backup*
+.vscode/settings.json
+project/simpylc/simulations/car/control_client/neural_client.py
