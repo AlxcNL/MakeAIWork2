@@ -1,0 +1,13 @@
+Rectangle heeft:
+    - init(self, width, height)
+    - area(self)
+
+Stap 1: Teken het UML ClassDiagram
+
+Stap 2: Definieer class Rectangle in rectangle.py
+
+Stap 3: Maak een Rectangle object aan in testRectangle.py
+
+Stap 5: Roep vanuit testRectangle.py methode area() van je object aan
+
+Stap 6: Pas class Rectangle aan totdat testRectangle werkt
