@@ -46,7 +46,6 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *.cover
-*.py,cover
 .hypothesis/
 .pytest_cache/
 
@@ -127,36 +126,15 @@ dmypy.json
 # Pyre type checker
 .pyre/
 .DS_Store
-opdrachten/practica/week07/image_recognition/notebook/datasets/
+opdrachten/
 .gitignore
 solutions/
-opdrachten/practica/week07/image_recognition/notebook/numpy_opdracht2_solutions.ipynb
 .vscode/launch.json
-opdrachten/practica/week07/image_recognition/notebook/pics/2750/
-opdrachten/practica/week07/beeldherkenning/notebook/~/tensorflow_datasets
-opdrachten/practica/week07/beeldherkenning/notebook/csv/mnist_train.csv
-opdrachten/practica/week08/sql/Chinook.db
-cursisten/
-eurosat/src/static/uploads
+scursisten/
+projects/eurosat
+.idea/vcs.xml
+diagrams/mindmap_python-backup*
+.vscode/settings.json
+
+.idea
 .vscode
-exp
-projects/eurosat/src/static/uploads
-projects/eurosat/src/node_modules
-projects/eurosat/src/package-lock.json
- ../.idea/
-projects/eurosat/.idea/
-projects/eurosat/data
-project/simpylc/simulations
-project/simpylc/default.samples
-project/simpylc/start_agent.sh
-.gitignore
-project/simpylc/default.samples
-project/simpylc/generate_simulations.sh
-project/simpylc/start_agent.sh
-project/simpylc/start_client.sh
-project/simpylc/start_world.sh
-project/simpylc/test_agent.sh
-project/simpylc/test_client.sh
-accessories/
-.idea/
-project/simpylc/default.samples

@@ -1,0 +1,11 @@
+digraph G {
+
+    rankdir=LR
+    splines=line
+
+    1 -> weighted_sum [label=b]
+    x0 -> weighted_sum [label=w0];
+    x1 -> weighted_sum [label=w1];
+    weighted_sum -> activation_function
+    activation_function -> y
+}
