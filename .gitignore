@@ -135,3 +135,6 @@ projects/eurosat
 .idea/vcs.xml
 diagrams/mindmap_python-backup*
 .vscode/settings.json
+
+.idea
+.vscode
