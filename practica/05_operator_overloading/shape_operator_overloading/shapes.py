@@ -9,6 +9,7 @@ class Shape(ABC):
         # Attributes
         self.width = width
         self.height = height
+        self.color = colorArg
 
         if colorArg is not None:
             self.setColor(colorArg)
@@ -27,10 +28,11 @@ class Shape(ABC):
     def __add__(self, other):
         return self.getArea() + other.getArea()
 
-    # Operator Overloading
-    # to enable the comparison of shapes
-    def __eq__(self, other):
-        return self.getArea()==other.getArea()
+    # # Operator Overloading
+    # # to enable the comparison of shapes
+    # def __eq__(self, other):
+    #     return self.getArea() == other.getArea() and self.getColor() == other.getColor()
+
 
 # Constructor
 # Starts with Double Underscore -> dunder methods
@@ -65,9 +67,3 @@ class Triangle(Shape):
         self.base = base
         self.height = height
         self.area = self.base * self.height * 0.5
-
-
-class Circle(Shape):
-    def __init__(self, radius, color):
-        super().__init__(radius)
-        self.area = math.power(self.radius) * 0.5 * math.pi
