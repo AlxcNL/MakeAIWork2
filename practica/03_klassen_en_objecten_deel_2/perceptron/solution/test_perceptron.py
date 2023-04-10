@@ -31,10 +31,6 @@ yTrain = np.array([0, 0, 0, 1])
 # 1 0 -> 0
 # 1 1 -> 1
 
-# Xtrain -> Ytrain
-# circle -> [1, 0]
-# cross -> [0, 1]
-
 # Maak een object perceptron aan
 andPerceptron = Perceptron()
 # Train de perceptron met een AND functie
@@ -66,6 +62,3 @@ testInput = np.array([0, 0])
 testInput = np.array([0, 1])
 testInput = np.array([1, 0])
 testInput = np.array([1, 1])
-
-
-[[], []]

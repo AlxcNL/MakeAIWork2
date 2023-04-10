@@ -3,6 +3,8 @@
 import math
 from shapes import Shape
 
+color = "black"
+
 
 class Circle(Shape):
     """
