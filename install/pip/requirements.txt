@@ -15,7 +15,6 @@ ptpython
 scipy
 seaborn
 sentence-transformers
-sklearn
 spacy
 torch
 torchvision 
