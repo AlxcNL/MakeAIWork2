@@ -25,12 +25,20 @@ logging.debug(f"xTrain : {xTrain}")
 # Waarheidstabel output
 yTrain = np.array([0, 0, 0, 1])
 
+# Xtrain -> Ytrain
+# 0 0 -> 0
+# 0 1 -> 0
+# 1 0 -> 0
+# 1 1 -> 1
+
 # Maak een object perceptron aan
 andPerceptron = Perceptron()
 # Train de perceptron met een AND functie
+# Default value for epochs -> nr of train cycles
+# Default value for learningRate
 andPerceptron.train(xTrain, yTrain, epochs=100, learningRate=0.1)
 
-# Test de perceptrong
+# Test de perceptron
 testInput = np.array([1, 0])
 prediction = andPerceptron.predict(testInput)
 logging.info(f"Predicted y value : {prediction}")

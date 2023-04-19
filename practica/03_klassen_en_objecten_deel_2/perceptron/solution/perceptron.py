@@ -27,6 +27,8 @@ class Perceptron:
     def initialize(self, nrOfFeatures):
         """Initialize w and b as zero"""
 
+        # TODO Random initialization
+
         # Create initial weight vector for each feature
         self.weightVector = np.zeros(nrOfFeatures)
 
@@ -42,18 +44,22 @@ class Perceptron:
         activation = np.dot(inputVector, self.weightVector) + self.bias
         logging.debug(f"activation : {activation}")
 
-        # Threshold
+        # Threshold = 0
         return 1 if activation > 0 else 0
 
+    # TODO Learning Rate en epochs ook in slides
+    # Capitals -> Matrix van nx1 (kolomvector), y -> single value
     def train(self, X, y, epochs=100, learningRate=0.1):
         """
         Train the perceptron using the inputVector
-        and target labels
+        and target labels (desired outputvalues)
         """
         # Initialize weights and bias
+        # 2
         nrOfFeatures = X.shape[1]
         self.initialize(nrOfFeatures)
 
+        # Aantal trainingen
         epochs = range(0, epochs)
 
         # for each epoch
@@ -72,14 +78,14 @@ class Perceptron:
                 logging.debug(f"prediction : {prediction}")
 
                 # Determine error
+                # Difference between desired output value and actual output value
                 error = label - prediction
                 logging.debug(f"error : {error}")
 
-                # update weight and b
+                # Update weight and b
                 deltaWeight = learningRate * error * inputVector
                 self.weightVector += deltaWeight
                 logging.debug(f"deltaWeight : {deltaWeight}")
-
                 deltaBias = learningRate * error
                 self.bias += deltaBias
                 logging.debug(f"deltaBias : {deltaBias}")

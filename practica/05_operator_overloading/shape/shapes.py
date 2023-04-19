@@ -49,6 +49,7 @@ class Rectangle(Shape):
 class Box(Rectangle):
     def __init__(self, widthArg, heightArg, depthArg):
         super().__init__(widthArg, heightArg)
+        self.depth = depthArg
 
 
 class Triangle(Shape):
