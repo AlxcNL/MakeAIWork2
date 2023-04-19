@@ -139,3 +139,13 @@ diagrams/mindmap_python-backup*
 .idea
 .vscode
 practica/07_ml_frameworks/data/
+cifar-10-python.tar.gz
+cifar-10-batches-py/
+Datasets/MNIST/
+practica/07_ml_frameworks/Image Classification using PyTorch Lightning.ipynb
+practica/07_ml_frameworks/lightning_logs/
+wandb-lightning/epvxc34o/checkpoints/
+project/simpylc/default.samples
+wandb-lightning/
+practica/07_ml_frameworks/02_pytorch_classification.ipynb
+project/simpylc/neural_client.py

@@ -1,0 +1,6 @@
+ipywidgets
+jsonargparse[signatures]>=4.17.0
+lightning
+lightning[extra]
+tensorboard
+wandb
