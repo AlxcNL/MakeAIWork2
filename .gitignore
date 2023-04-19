@@ -148,3 +148,4 @@ wandb-lightning/epvxc34o/checkpoints/
 project/simpylc/default.samples
 wandb-lightning/
 practica/07_ml_frameworks/02_pytorch_classification.ipynb
+project/simpylc/neural_client.py
