@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 export PYTHONPATH=simulations/car
 export LIBGL_ALLOW_SOFTWARE=1
